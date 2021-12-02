@@ -45,7 +45,7 @@
 	getMap('ed876b42a223d1fc0a141c82c916d785a9a7f55f').then(response => data = response);
 </script>
 
-{#if !data?.hasOwnProperty('error') && (searchMapName ? data?.hasOwnProperty('docs') : data?.hasOwnProperty('id'))}
+{#if !data?.hasOwnProperty('error') && (searchMapName ? (data?.hasOwnProperty('docs') && data?.docs.length > 0) : data?.hasOwnProperty('id'))}
 	{#if searchMapName}
 		{#each data?.docs as map}
 			<img src={map?.versions[0]?.coverURL} alt={map?.name} width="100" height="100">
