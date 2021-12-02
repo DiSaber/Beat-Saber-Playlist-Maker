@@ -4,6 +4,7 @@
 
 <script>
 	var data;
+	var currentId;
 	
 	async function getData(url = '') {
 		// https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
@@ -33,3 +34,7 @@
 <h1>Id: {data?.id}</h1>
 <h1>Name: {data?.name}</h1>
 <h1>Hash: {data?.versions[0]?.hash}</h1>
+<textarea bind:value={currentId}></textarea>
+<button on:click={getMap(currentId, '').then(response => data = response)}>
+	Refresh
+</button>
