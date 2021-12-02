@@ -1,3 +1,7 @@
+<svelte:head>
+	<title>Playlist Maker</title>
+</svelte:head>
+
 <script>
 	var data;
 	
