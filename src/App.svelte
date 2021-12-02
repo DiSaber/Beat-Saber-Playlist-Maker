@@ -29,6 +29,7 @@
 	getMap('ed876b42a223d1fc0a141c82c916d785a9a7f55f').then(response => data = response)
 </script>
 
+<img src={data?.versions[0]?.coverURL} alt={data?.name}>
 <h1>Id: {data?.id}</h1>
 <h1>Name: {data?.name}</h1>
 <h1>Hash: {data?.versions[0]?.hash}</h1>
